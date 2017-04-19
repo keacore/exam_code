@@ -1,0 +1,24 @@
+@model ConsoleApplication.Models.Student
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create Student</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1>Create Student</h1>
+    <form action="/Student/Create/" method="POST">
+        <input asp-for="StudentID" >
+        <label asp-validation=""></label>
+        <input asp-for="FirstName">
+
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" >
+        <input asp-for="EnrollmenDate">
+        <input type="Submit" value="Send">
+    </form>
+    </body>
+</html>
