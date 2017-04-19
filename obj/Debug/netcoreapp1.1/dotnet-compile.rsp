@@ -1,5 +1,5 @@
---temp-output:/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/obj/Debug/netcoreapp1.1/
---out:/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/bin/Debug/netcoreapp1.1/06_code_from_teachings_DEV.dll
+--temp-output:/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/obj/Debug/netcoreapp1.1/
+--out:/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/bin/Debug/netcoreapp1.1/07_code_from_teachings.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_1
@@ -9,7 +9,7 @@
 --optimize:False
 --debug-type:portable
 --emit-entry-point:True
---output-name:06_code_from_teachings_DEV
+--output-name:07_code_from_teachings
 --file-version:1.0.0.0
 --version:1.0.0.0
 --informational-version:1.0.0
@@ -195,18 +195,18 @@
 --reference:/Users/clbo/.nuget/packages/System.Threading.Timer/4.3.0/ref/netstandard1.2/System.Threading.Timer.dll
 --reference:/Users/clbo/.nuget/packages/System.Xml.ReaderWriter/4.3.0/ref/netstandard1.3/System.Xml.ReaderWriter.dll
 --reference:/Users/clbo/.nuget/packages/System.Xml.XDocument/4.3.0/ref/netstandard1.3/System.Xml.XDocument.dll
---resource:"/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/obj/Debug/netcoreapp1.1/06_code_from_teachings_DEVdotnet-compile.deps.json",06_code_from_teachings_DEV.deps.json
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Program.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Startup.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Controllers/AdminController.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Controllers/HomeController.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Controllers/StudentController.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Migrations/20170405210250_first.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Migrations/20170405210250_first.Designer.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Migrations/MyDbContextModelSnapshot.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Models/Course.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Models/DbInitializer.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Models/Enrollment.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Models/MyDbContext.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Models/Student.cs
-/Users/clbo/Google Drive/KEA_Macbook/dotnet/development/06_clientside/06_code_from_teachings_DEV/Models/StudentViewModel.cs
+--resource:"/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/obj/Debug/netcoreapp1.1/07_code_from_teachingsdotnet-compile.deps.json",07_code_from_teachings.deps.json
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Program.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Startup.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Controllers/AdminController.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Controllers/HomeController.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Controllers/StudentController.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Migrations/20170405210250_first.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Migrations/20170405210250_first.Designer.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Migrations/MyDbContextModelSnapshot.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/Course.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/DbInitializer.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/Enrollment.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/MyDbContext.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/Student.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/StudentViewModel.cs

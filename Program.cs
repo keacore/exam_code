@@ -14,7 +14,7 @@ namespace ConsoleApplication
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5003")
+                .UseUrls("http://localhost:5004")
                 .Build();
 
             host.Run();
