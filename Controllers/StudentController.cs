@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using ConsoleApplication.Models;
@@ -6,16 +5,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ConsoleApplication.Controllers
 {
-    public class StudentController : Controller 
+    public class StudentController : Controller
     {
         MyDbContext db = new MyDbContext();
-        // Index
+
+        // Read
         [HttpGet]
         public IActionResult Index()
         {
             List<Student> students = db.Students.ToList();
             return View(students);
         }
+
+        // Create
         [HttpGet]
         public IActionResult Create()
         {
@@ -25,16 +27,17 @@ namespace ConsoleApplication.Controllers
         [HttpPost]
         public IActionResult Create(Student st)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 db.Students.Add(st);
-                 db.SaveChanges();
-                 return RedirectToAction("Index");
+                db.SaveChanges();
+                return RedirectToAction("Index");
 
-            } else 
+            }
+            else
             {
                 return View();
-            }   
+            }
         }
 
         // Update
@@ -46,33 +49,31 @@ namespace ConsoleApplication.Controllers
         [HttpPost]
         public IActionResult Update(Student student)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                db.Students.Add(student);
-                 db.SaveChanges();
-                 return RedirectToAction("Index");
+                db.Students.Update(student);
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            
             return View(student);
         }
 
-//  [HttpGet]
-//         //Delete
-//         public IActionResult Delete(int id)
-//         {
-            
-//             Student student = db.Students.Find(id);
-//             return View(student);
-//         }
+        //Delete
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Student student = db.Students.Find(id);
+            return View(student);
+        }
 
-//         [HttpPost]
-//         //Delete
-//         public IActionResult Delete(int id)
-//         {     
-//             Student student = db.Students.Find(id);
-//             RedirectToAction(Index);
-//            // return View(student);
-//         }
+        [HttpPost]
+        public IActionResult Delete(Student st)
+        {
+            Student student = db.Students.Find(st.StudentID);
+            db.Students.Remove(student);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }
