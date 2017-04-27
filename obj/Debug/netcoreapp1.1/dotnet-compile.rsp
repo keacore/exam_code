@@ -210,3 +210,6 @@
 /Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/MyDbContext.cs
 /Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/Student.cs
 /Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/StudentViewModel.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/Repositories/IStudentRepository.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/Repositories/SimpleStudentRepository.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/07_Repositories_ViewModels/07_code_from_teachings/Models/Repositories/StudentRepository.cs

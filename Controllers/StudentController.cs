@@ -1,19 +1,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using ConsoleApplication.Models;
+using ConsoleApplication.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ConsoleApplication.Controllers
 {
     public class StudentController : Controller
     {
+        // Tightly Couple
         MyDbContext db = new MyDbContext();
+
+       // Loosly Coupled
+        private IStudentRepository studentRepository;
+
+        public StudentController(IStudentRepository studentRepository)
+        {
+            this.studentRepository = studentRepository;
+        }
 
         // Read
         [HttpGet]
         public IActionResult Index()
         {
-            List<Student> students = db.Students.ToList();
+            //List<Student> students = db.Students.ToList();
+            IEnumerable<Student> students = studentRepository.GetAll();
             return View(students);
         }
 
@@ -29,8 +40,11 @@ namespace ConsoleApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Students.Add(st);
-                db.SaveChanges();
+                studentRepository.Save(st);
+
+                // Moved to the repo
+                // db.Students.Add(st);
+                // db.SaveChanges();
                 return RedirectToAction("Index");
 
             }
@@ -69,8 +83,8 @@ namespace ConsoleApplication.Controllers
         [HttpPost]
         public IActionResult Delete(Student st)
         {
-            Student student = db.Students.Find(st.StudentID);
-            db.Students.Remove(student);
+            //Student student = db.Students.Find(st.StudentID);
+            db.Students.Remove(st);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
