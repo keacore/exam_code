@@ -19,8 +19,8 @@ namespace ConsoleApplication
             //       dotnet ef database update
             //       dotnet run
             servises.AddMvc();
-           // servises.AddScoped<IStudentRepository, StudentRepository>();
-            servises.AddScoped<IStudentRepository, SimpleStudentRepository>();
+            servises.AddScoped<IStudentRepository, StudentRepository>();
+           // servises.AddScoped<IStudentRepository, SimpleStudentRepository>();
         }
 
        public void Configure(IApplicationBuilder app, ILoggerFactory logger, MyDbContext context) // 1. add a context parameter

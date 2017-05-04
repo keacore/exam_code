@@ -6,7 +6,7 @@ namespace ConsoleApplication.Models.Repositories
 {
     public class SimpleStudentRepository : IStudentRepository
     {
-        public void Delete(int id)
+        public void Delete(Student st)
         {
             throw new NotImplementedException();
         }

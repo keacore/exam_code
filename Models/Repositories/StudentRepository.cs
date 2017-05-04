@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConsoleApplication.Models.Repositories
@@ -14,19 +14,23 @@ namespace ConsoleApplication.Models.Repositories
             _db = db;
             _students = db.Students;
         }
-        public void Delete(int id)
+        public void Delete(Student st)
         {
-            throw new NotImplementedException();
+            Student student = _db.Students.Find(st.StudentID);
+            _db.Students.Remove(student);
+            _db.SaveChanges();
         }
 
         public Student Get(int id)
         {
-            throw new NotImplementedException();
+            Student student =  _db.Students.Include(s => s.Enrollments).ThenInclude(e => e.Course).Where(r => r.StudentID == id).FirstOrDefault();
+            return student;
         }
 
         public IEnumerable<Student> GetAll()
         {
-            throw new NotImplementedException();
+            IEnumerable<Student> students = _db.Students;
+            return students;
         }
 
         public void Save(Student student)
@@ -37,7 +41,8 @@ namespace ConsoleApplication.Models.Repositories
 
         public void Update(Student student)
         {
-            throw new NotImplementedException();
+            _db.Students.Update(student);
+            _db.SaveChanges();
         }
     }
 }

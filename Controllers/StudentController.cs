@@ -57,7 +57,8 @@ namespace ConsoleApplication.Controllers
         // Update
         public IActionResult Update(int id)
         {
-            Student student = db.Students.Find(id);
+            //Student student = db.Students.Find(id);
+            Student student =  studentRepository.Get(id);
             return View(student);
         }
         [HttpPost]
@@ -65,8 +66,9 @@ namespace ConsoleApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Students.Update(student);
-                db.SaveChanges();
+                studentRepository.Update(student);
+                //db.Students.Update(student);
+                //db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(student);
@@ -76,7 +78,8 @@ namespace ConsoleApplication.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            Student student = db.Students.Find(id);
+            //Student student = db.Students.Find(id);
+            Student student =  studentRepository.Get(id);
             return View(student);
         }
 
@@ -84,9 +87,16 @@ namespace ConsoleApplication.Controllers
         public IActionResult Delete(Student st)
         {
             //Student student = db.Students.Find(st.StudentID);
-            db.Students.Remove(st);
-            db.SaveChanges();
+            //db.Students.Remove(st);
+            //db.SaveChanges();
+            studentRepository.Delete(st);
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Details(int id)
+        {
+            var student = studentRepository.Get(id);
+            return View(student);
         }
 
     }
