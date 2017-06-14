@@ -1,4 +1,4 @@
 # Exam Code
-Code used during Client Side Development teachings the 4/5-2017
+## For use at the exam spring 2017 - this is the same code as 08_code_used_in_teachings
 
 
