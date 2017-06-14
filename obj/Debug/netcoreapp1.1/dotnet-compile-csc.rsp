@@ -205,6 +205,7 @@
 "/Users/clbo/Google Drive/KEA_Macbook/dotnet/08_viewModels/08_code_from_teachings/Models/Entities/Course.cs"
 "/Users/clbo/Google Drive/KEA_Macbook/dotnet/08_viewModels/08_code_from_teachings/Models/Entities/Enrollment.cs"
 "/Users/clbo/Google Drive/KEA_Macbook/dotnet/08_viewModels/08_code_from_teachings/Models/Entities/Student.cs"
+"/Users/clbo/Google Drive/KEA_Macbook/dotnet/08_viewModels/08_code_from_teachings/Models/Entities/StudentCourseViewModel.cs"
 "/Users/clbo/Google Drive/KEA_Macbook/dotnet/08_viewModels/08_code_from_teachings/Models/Repositories/CourseRepository.cs"
 "/Users/clbo/Google Drive/KEA_Macbook/dotnet/08_viewModels/08_code_from_teachings/Models/Repositories/EnrollmentRepository.cs"
 "/Users/clbo/Google Drive/KEA_Macbook/dotnet/08_viewModels/08_code_from_teachings/Models/Repositories/ICourseRepository.cs"

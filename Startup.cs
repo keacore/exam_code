@@ -20,6 +20,7 @@ namespace ConsoleApplication
             //       dotnet run
             servises.AddMvc();
             servises.AddScoped<IStudentRepository, StudentRepository>();
+            servises.AddScoped<ICourseRepository, CourseRepository>();
            // servises.AddScoped<IStudentRepository, SimpleStudentRepository>();
         }
 
@@ -28,6 +29,7 @@ namespace ConsoleApplication
            app.UseStaticFiles();
             // Log to the Console
             logger.AddConsole();
+            //app.UseDeveloperExceptionPage();
             app.UseMvcWithDefaultRoute();
             DbInitializer.Initialize(context);  // 2. add this and run the program
                                                 // You will get a runtime error:

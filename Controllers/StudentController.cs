@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using System.Linq;
 using ConsoleApplication.Models;
+using ConsoleApplication.Models.Entities;
 using ConsoleApplication.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using ConsoleApplication.Models.Entities;
 
 namespace ConsoleApplication.Controllers
 {
@@ -14,10 +13,13 @@ namespace ConsoleApplication.Controllers
 
        // Loosly Coupled
         private IStudentRepository studentRepository;
+        private ICourseRepository courseRepository;
 
-        public StudentController(IStudentRepository studentRepository)
+        public StudentController(IStudentRepository studentRepository, ICourseRepository courseRepository)
         {
             this.studentRepository = studentRepository;
+            this.courseRepository = courseRepository;
+            
         }
 
         // Read
@@ -102,7 +104,7 @@ namespace ConsoleApplication.Controllers
 
         public IActionResult Course(int id)
         {
-            StudentCourseViewModel stcvm = new StudentCourseViewModel(); 
+            StudentCourseViewModel stcvm = new StudentCourseViewModel();
             stcvm.Student = studentRepository.Get(id);
             stcvm.Courses = courseRepository.GetAll();  
 
